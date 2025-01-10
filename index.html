@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="assets/factors/aug3d_logo.png" type="image/x-icon">
+
+  <meta charset="utf-8">
+  <meta name="description" content="Aug3D: Augmenting large scale outdoor datasets for Generalizable Novel View Synthesis">
+  <meta name="keywords" content="PixelNeRF, generalizable novel view synthesis, outdoor datasets, augmentation, Structure-from-Motion, UrbanScene3D, camera poses">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="assets/Thumbnail.png" />
+  <title>Aug3D: Augmenting large scale outdoor datasets for Generalizable Novel View Synthesis</title>
+
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Aug3D: Augmenting Large Scale Outdoor Datasets for Generalizable Novel View Synthesis</h1>
+          <h2 class="title is-6 publlication-title">IROS Workshop 2024</h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://adityarauniyar.github.io/">Aditya Rauniyar</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://theairlab.org/team/omar_alama/">Omar Alama</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://silongyong.github.io/">Silong Yong</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.ri.cmu.edu/ri-faculty/katia-sycara/">Katia Sycara</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.ri.cmu.edu/ri-faculty/sebastian-scherer/">Sebastian Scherer</a><sup>1</sup></span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">
+              <a href="https://www.cmu.edu/" style="color: rgb(179, 8, 8);">Carnegie Mellon University</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="assets/aug3d.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv Link. -->
+              <span class="link-block">
+                <a href=""
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop" style="max-width: 80%; margin: 0 auto;">
+    <div class="hero-body">
+      <img id="teaser" src="./assets/aug3d.png" alt="Aug3D: Augmenting large scale outdoor datasets for Generalizable Novel View Synthesis" style="height: auto; width: 80%; max-width: 800px; object-fit: cover; margin: 0 auto; display: block;">
+      <h2 class="subtitle has-text-centered" style="max-width: 800px; margin: 1em auto;">
+        Aug3D addresses challenges with low-overlap clusters in large-scale outdoor datasets for generalizable novel view synthesis by reconstructing scenes, sampling camera poses to mitigate overlap issues, and combining these samples with the real dataset, resulting in improved performance.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent photorealistic Novel View Synthesis (NVS)
+            advances have increasingly gained attention. However, these
+            approaches remain constrained to small indoor scenes. While
+            optimization-based NVS models have made attempts to address
+            this, generalizable feed-forward methods—offering significant
+            advantages—remain underexplored. In this work, we train
+            PixelNeRF, a feed-forward NVS model, on the large-scale
+            UrbanScene3D dataset. We propose four training strategies to
+            cluster and train on this dataset, highlighting that performance
+            is hindered by limited view overlap. To address this, we
+            introduce Aug3D, an augmentation technique that leverages
+            reconstructed scenes using traditional Structure-from-Motion
+            (SfM). Aug3D generates well-conditioned novel views through
+            grid and semantic sampling to enhance feed-forward NVS
+            model learning. Our experiments reveal that reducing the
+            number of views per cluster from 20 to 10 improves PSNR
+            by 10%, but the performance remains suboptimal. Aug3D
+            further addresses this by combining the newly generated novel
+            views with the original dataset, demonstrating its effective-
+            ness in improving the model’s ability to predict novel views.
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website adapted from the Nerfies templates, which is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            If you use the <a href="https://github.com/aug3Dim/aug3Dim.github.io">source code</a> of this website,
+            please also link back to the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies source code</a> in your footer.
+          </p>
+          <p>
+            This project is a part of Aug3D: Augmenting large scale outdoor datasets for Generalizable Novel View Synthesis.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
