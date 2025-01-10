@@ -103,15 +103,17 @@
 </section>
 
 <section class="hero teaser">
-  <div class="container is-max-desktop" style="max-width: 80%; margin: 0 auto;">
+  <div class="container is-max-desktop" style="max-width: 70%; margin: 0 auto;">
     <div class="hero-body">
-      <img id="teaser" src="./assets/aug3d.png" alt="Aug3D: Augmenting large scale outdoor datasets for Generalizable Novel View Synthesis" style="height: auto; width: 80%; max-width: 800px; object-fit: cover; margin: 0 auto; display: block;">
-      <h2 class="subtitle has-text-centered" style="max-width: 800px; margin: 1em auto;">
-        Aug3D addresses challenges with low-overlap clusters in large-scale outdoor datasets for generalizable novel view synthesis by reconstructing scenes, sampling camera poses to mitigate overlap issues, and combining these samples with the real dataset, resulting in improved performance.
+      <img id="teaser" src="./assets/aug3d.png" alt="Aug3D: Augmenting large-scale outdoor datasets for Generalizable Novel View Synthesis" 
+           style="height: auto; width: 70%; max-width: 600px; object-fit: cover; margin: 0 auto; display: block;">
+      <h2 class="subtitle has-text-centered" style="font-size: 1.25rem; max-width: 600px; margin: 1em auto; line-height: 1.5;">
+        Solving dataset challenges: Aug3D generates new views to tackle low-overlap clusters, boosting model performance and enabling better view synthesis.
       </h2>
     </div>
   </div>
 </section>
+
 
 
 <section class="hero is-small is-light">
@@ -174,10 +176,19 @@
         <div class="grid-item">An image similarity matrix using shared feature points among two images.</div>
 
         <!-- Row 4: Qualitative Results -->
-        <div class="grid-item"><img src="./assets/results/sequence_id_results.png" alt="Sequence ID Results" style="max-width: 100%;"></div>
-        <div class="grid-item"><img src="./assets/results/camera_pose_results.png" alt="Camera Pose Results" style="max-width: 100%;"></div>
-        <div class="grid-item"><img src="./assets/results/unprojected_points_results.png" alt="Unprojected Points Results" style="max-width: 100%;"></div>
-        <div class="grid-item"><img src="./assets/results/shared_features_results.png" alt="Shared Features Results" style="max-width: 100%;"></div>
+        <div class="grid-item">
+          <img src="./assets/results/sequence_id_results.png" alt="Sequence ID Results" style="width: 200px; height: 200px; object-fit: cover;">
+        </div>
+        <div class="grid-item">
+          <img src="./assets/results/camera_pose_results.png" alt="Camera Pose Results" style="width: 200px; height: 200px; object-fit: cover;">
+        </div>
+        <div class="grid-item">
+          <img src="./assets/results/unprojected_points_results.png" alt="Unprojected Points Results" style="width: 200px; height: 200px; object-fit: cover;">
+        </div>
+        <div class="grid-item">
+          <img src="./assets/results/shared_features_results.png" alt="Shared Features Results" style="width: 200px; height: 200px; object-fit: cover;">
+        </div>
+        
       </div>
 
       <div class="table-container" style="margin-top: 2em;">
@@ -221,6 +232,88 @@
     </div>
   </div>
 </section>
+
+<section class="hero">
+  <div class="container is-max-desktop" style="max-width: 80%; margin: 0 auto;">
+    <div class="hero-body">
+      <h3 class="title is-4 has-text-centered">Augmentation Techniques in Aug3D</h3>
+      <div class="columns is-multiline is-centered">
+        <!-- Multiscale Grid Sampling -->
+        <div class="column is-half">
+          <figure>
+            <img src="./assets/diagrams/multi-scale grid sampling.png" alt="Multiscale Grid Sampling" style="width: 100%; height: auto;">
+            <figcaption class="has-text-centered" style="margin-top: 0.5em;">
+              (a) Multiscale Grid Sampling: Dynamic camera placements for varying grid scales.
+            </figcaption>
+          </figure>
+        </div>
+        <!-- Semantic Sampling -->
+        <div class="column is-half">
+          <figure>
+            <img src="./assets/diagrams/semantic-plane-fitting.png" alt="Semantic Sampling" style="width: 100%; height: auto;">
+            <figcaption class="has-text-centered" style="margin-top: 0.5em;">
+              (b) Semantic Sampling: Focused sampling around urban and meaningful regions.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="results">
+  <div class="container is-max-desktop" style="max-width: 80%; margin: 0 auto;">
+    <div class="hero-body">
+      <h3 class="title is-4 has-text-centered">Results for Various Datasets</h3>
+      <div class="table-container" style="overflow-x: auto;">
+        <table class="table is-striped is-hoverable is-fullwidth" style="margin: 0 auto;">
+          <thead>
+            <tr>
+              <th>Dataset</th>
+              <th>Configuration</th>
+              <th>Best PSNR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="3"><strong>Real Dataset (Baseline)</strong></td>
+              <td>Input views 3</td>
+              <td>20.03</td>
+            </tr>
+            <tr>
+              <td>Input views 6</td>
+              <td>19.95</td>
+            </tr>
+            <tr>
+              <td>Input views 9</td>
+              <td>19.59</td>
+            </tr>
+            <tr>
+              <td><strong>Synthetic Dataset (Ours)</strong></td>
+              <td>Grid Sampling</td>
+              <td>29.12</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Semantic Plane Fitting</td>
+              <td>28.79</td>
+            </tr>
+            <tr>
+              <td rowspan="2"><strong>Aug3D (Ours + Baseline)</strong></td>
+              <td>Grid</td>
+              <td>21.67</td>
+            </tr>
+            <tr>
+              <td>Semantic</td>
+              <td>21.80</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <footer class="footer">
   <div class="container">
