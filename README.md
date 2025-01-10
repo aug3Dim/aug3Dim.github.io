@@ -1,6 +1,6 @@
 # Aug3D: Augmenting large scale outdoor datasets for Generalizable Novel View Synthesis
 
-This is the repository that contains the source code for our paper website [_Aug3D: Augmenting large scale outdoor datasets for Generalizable Novel View Synthesis_](https://aug3d.github.io/).
+This is the repository that contains the source code for our paper website [_Aug3D: Augmenting large scale outdoor datasets for Generalizable Novel View Synthesis_](https://aug3dim.github.io/).
 It has been adapted from the [Nerfies website](https://nerfies.github.io).
 
 ---
