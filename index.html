@@ -150,75 +150,75 @@
     </div>
 </section>
 
-<section class="hero is-small is-light">
+<section class="hero is-small">
   <div class="hero-body">
-      <div class="container is-max-desktop">
-          <h2 class="title is-3">Different Methods of Data Curation for GNVS</h2>
-          <div class="grid-container">
-              <!-- Row 1: Method Names -->
-              <div class="grid-item">Sequence ID</div>
-              <div class="grid-item">Camera Pose</div>
-              <div class="grid-item">Unprojected Points</div>
-              <div class="grid-item">Shared Features</div>
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Different Methods of Data Curation for GNVS</h2>
+      <div class="grid-container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center;">
+        <!-- Row 1: Method Names -->
+        <div class="grid-item"><strong>Sequence ID</strong></div>
+        <div class="grid-item"><strong>Camera Pose</strong></div>
+        <div class="grid-item"><strong>Unprojected Points</strong></div>
+        <div class="grid-item"><strong>Shared Features</strong></div>
 
-              <!-- Row 2: Method Diagrams -->
-              <div class="grid-item"><img src="sequence_id_diagram.png" alt="Sequence ID Diagram"></div>
-              <div class="grid-item"><img src="camera_pose_diagram.png" alt="Camera Pose Diagram"></div>
-              <div class="grid-item"><img src="unprojected_points_diagram.png" alt="Unprojected Points Diagram"></div>
-              <div class="grid-item"><img src="shared_features_diagram.png" alt="Shared Features Diagram"></div>
+        <!-- Row 2: Method Diagrams -->
+        <div class="grid-item"><img src="./assets/diagrams/sequence_id_diagram.png" alt="Sequence ID Diagram" style="max-width: 100%;"></div>
+        <div class="grid-item"><img src="./assets/diagrams/grid_based_diagram.png" alt="Camera Pose Diagram" style="max-width: 100%;"></div>
+        <div class="grid-item"><img src="./assets/diagrams/unprojected_points_diagram.png" alt="Unprojected Points Diagram" style="max-width: 100%;"></div>
+        <div class="grid-item"><img src="./assets/diagrams/shared_features_diagram.png" alt="Shared Features Diagram" style="max-width: 100%;"></div>
 
-              <!-- Row 3: Descriptions -->
-              <div class="grid-item">Using a sliding window approach.</div>
-              <div class="grid-item">Using image camera poses in (x, y, z) coordinate.</div>
-              <div class="grid-item">A point from camera space is unprojected to the ground plane in the world space.</div>
-              <div class="grid-item">An image similarity matrix using shared feature points among two images.</div>
+        <!-- Row 3: Descriptions -->
+        <div class="grid-item">Using a sliding window approach.</div>
+        <div class="grid-item">Using image camera poses in (x, y, z) coordinate.</div>
+        <div class="grid-item">A point from camera space is unprojected to the ground plane in the world space.</div>
+        <div class="grid-item">An image similarity matrix using shared feature points among two images.</div>
 
-              <!-- Row 4: Qualitative Results -->
-              <div class="grid-item"><img src="sequence_id_results.png" alt="Sequence ID Results"></div>
-              <div class="grid-item"><img src="camera_pose_results.png" alt="Camera Pose Results"></div>
-              <div class="grid-item"><img src="unprojected_points_results.png" alt="Unprojected Points Results"></div>
-              <div class="grid-item"><img src="shared_features_results.png" alt="Shared Features Results"></div>
-          </div>
-
-          <div class="table-container">
-              <table>
-                  <thead>
-                      <tr>
-                          <th>Image Clustering Method</th>
-                          <th>Best PSNR</th>
-                          <th>Lowest PSNR</th>
-                          <th>Average PSNR</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>Sequence ID</td>
-                          <td>9.7</td>
-                          <td>0.0</td>
-                          <td>3.5</td>
-                      </tr>
-                      <tr>
-                          <td>Camera Pose</td>
-                          <td>12.2</td>
-                          <td>0.0</td>
-                          <td>4.6</td>
-                      </tr>
-                      <tr>
-                          <td>Unprojected Points</td>
-                          <td>13.6</td>
-                          <td>0.0</td>
-                          <td>9.9</td>
-                      </tr>
-                      <tr>
-                          <td>Shared Features</td>
-                          <td class="highlight">20.03</td>
-                          <td>10.9</td>
-                          <td class="highlight">14.6</td>
-                      </tr>
-                  </tbody>
-              </table>
-          </div>
+        <!-- Row 4: Qualitative Results -->
+        <div class="grid-item"><img src="./assets/results/sequence_id_results.png" alt="Sequence ID Results" style="max-width: 100%;"></div>
+        <div class="grid-item"><img src="./assets/results/camera_pose_results.png" alt="Camera Pose Results" style="max-width: 100%;"></div>
+        <div class="grid-item"><img src="./assets/results/unprojected_points_results.png" alt="Unprojected Points Results" style="max-width: 100%;"></div>
+        <div class="grid-item"><img src="./assets/results/shared_features_results.png" alt="Shared Features Results" style="max-width: 100%;"></div>
       </div>
+
+      <div class="table-container" style="margin-top: 2em;">
+        <table class="table is-bordered is-striped is-hoverable is-fullwidth" style="margin: 0 auto; text-align: center;">
+          <thead>
+            <tr>
+              <th>Image Clustering Method</th>
+              <th>Best PSNR</th>
+              <th>Lowest PSNR</th>
+              <th>Average PSNR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sequence ID</td>
+              <td>9.7</td>
+              <td>0.0</td>
+              <td>3.5</td>
+            </tr>
+            <tr>
+              <td>Camera Pose</td>
+              <td>12.2</td>
+              <td>0.0</td>
+              <td>4.6</td>
+            </tr>
+            <tr>
+              <td>Unprojected Points</td>
+              <td>13.6</td>
+              <td>0.0</td>
+              <td>9.9</td>
+            </tr>
+            <tr>
+              <td>Shared Features</td>
+              <td class="highlight">20.03</td>
+              <td>10.9</td>
+              <td class="highlight">14.6</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </section>
 
