@@ -22,6 +22,15 @@ $ bundle exec jekyll serve --lsi
 Please feel free to cite our work if you find it useful:
 
 ```
+@misc{rauniyar2025aug3daugmentinglargescale,
+      title={Aug3D: Augmenting large scale outdoor datasets for Generalizable Novel View Synthesis}, 
+      author={Aditya Rauniyar and Omar Alama and Silong Yong and Katia Sycara and Sebastian Scherer},
+      year={2025},
+      eprint={2501.06431},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2501.06431}, 
+}
 ```
 
 # Website License
